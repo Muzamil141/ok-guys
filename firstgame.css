@@ -1,0 +1,136 @@
+ *{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ background-image: url("box2.jpg.jpeg");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ font-family: Arial, sans-serif;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ min-height: 100vh;
+ padding: 20px;
+}
+
+header {
+ color: aqua;
+ font-weight: bolder;
+ margin-bottom: 20px;
+}
+
+h1 {
+ text-align: center;
+ font-style: italic;
+ color: rgb(255, 251, 0);
+ margin-bottom: 20px;
+}
+
+.msg {
+ color: rgb(225, 255, 0);
+ background-color: rgb(255, 0, 13);
+ font-size: large;
+ border: 1px solid black;
+ padding: 5px 10px;
+ margin: 10px auto;
+ text-align: center;
+ display: inline-block;
+}
+
+/* Container for the game board */
+.container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 20px;
+}
+
+/* Using CSS Grid for a strict 3x3 Tic Tac Toe pattern */
+.game {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ width: 60vmin;
+ height: 60vmin;
+ gap: 1.5vmin;
+}
+
+.box {
+ background-color: rgb(237, 145, 255);
+ color: rgb(255, 0, 0);
+ font-weight: bold;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 8vmin;
+ border: none;
+ /* Ensuring box is square (no border-radius, so no circle effect) */
+ border-radius: 0;
+}
+
+/* Hover effect */
+.box:hover {
+ background-color: rgba(252, 255, 61, 0.644);
+}
+
+/* Buttons Container */
+.buttons-container {
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ flex-wrap: wrap;
+}
+
+.btn1, .btn2 {
+ font-weight: bold;
+ font-size: 1rem;
+ padding: 1rem;
+ background-color: rgb(255, 0, 13);
+ color: rgb(255, 255, 0);
+ border-radius: 5px;
+ cursor: pointer;
+ border: none;
+ transition: background-color 0.3s ease;
+}
+
+.btn1:hover, .btn2:hover {
+ background-color: rgb(200, 0, 10);
+}
+
+.btn2 {
+ color: rgb(225, 255, 0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+ .game {
+     width: 50vmin;
+     height: 50vmin;
+     gap: 1vmin;
+ }
+ .box {
+     font-size: 7vmin;
+ }
+ .btn1, .btn2 {
+     font-size: 0.9rem;
+     padding: 0.8rem;
+ }
+}
+
+@media (max-width: 768px) {
+ .game {
+     width: 55vmin;
+     height: 55vmin;
+     gap: 1.2vmin;
+ }
+ .box {
+     font-size: 7.5vmin;
+ }
+ .btn1, .btn2 {
+     font-size: 0.95rem;
+     padding: 0.9rem;
+ }
+}
